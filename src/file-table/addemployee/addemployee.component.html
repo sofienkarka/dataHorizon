@@ -1,0 +1,48 @@
+<h2>Thanks to add a new employee informations</h2>
+<form class="example-form" [formGroup]='newEmployee'>
+    <div>
+    <mat-form-field class="example-full-width">
+        <mat-label>Employee's Name</mat-label>
+        <input matInput placeholder="Enter employee's name"  formControlName="employee_name">
+        <mat-error *ngIf="newEmployee.controls.employee_name.errors?.required">
+            Name is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>employee's id</mat-label>
+        <input matInput placeholder="enter employee'id" formControlName="id">
+        <mat-error *ngIf="newEmployee.controls.id.errors?.required">
+            Id is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>employee's Age</mat-label>
+        <input matInput placeholder="enter employee'Age" formControlName="employee_age" >
+        <mat-error *ngIf="newEmployee.controls.employee_age.errors?.required">
+            Age is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+            <mat-label>employee's Salary</mat-label>
+            <input matInput placeholder="enter employee'Salary" formControlName="employee_salary" >
+            <mat-error *ngIf="newEmployee.controls.employee_salary.errors?.required">
+                Salary is <strong>required</strong>
+              </mat-error>
+          </mat-form-field>
+    
+  
+    </div>
+
+
+    <button (click)="newEmployeeAdd()" mat-raised-button color="success">Submit new employee</button>
+
+
+
+
+</form>
